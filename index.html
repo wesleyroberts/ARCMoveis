@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="features.css">
+    <link rel="stylesheet" href="contacus.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="whatsapp.css">
+    <title>Header Exemplo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner_container {
+            height: 80vh;
+            margin: auto;
+        }
+
+
+        .project_card {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner_container swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner_container swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner_container swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .banner_container swiper-slide swiper-button-next {
+            background: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+
+        .swiper-button-next svg {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">ARC<span>móveis</span></div>
+
+            <nav id="desktop-menu">
+                <a href="#banner_principal">Home</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <button class="cta-btn">Orçamento</button>
+
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+        </div>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#home">Home</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+            <button class="cta-btn">Orçamento</button>
+        </div>
+    </header>
+
+    <a href="https://wa.me/5511999999999" class="whatsapp-button" target="_blank" title="Fale conosco no WhatsApp">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp" />
+    </a>
+
+    <section id="banner_principal">
+        <div class="banner_container">
+            <swiper-container class="banner_carrossel" navigation="true">
+                <swiper-slide>
+                    <img src="./assets/home-1.jpg" alt="Banner 1">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./assets/home-2.jpg" alt="Banner 2">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="./assets/home-4-scaled.png" alt="Banner 3">
+                </swiper-slide>
+            </swiper-container>
+        </div>
+    </section>
+    <section id="produtos">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="title">Nossos <span>Serviços</span></h2>
+                <p class="subtitle">
+                    Oferecemos soluções completas em móveis e design de interiores, sempre com foco na qualidade e
+                    personalização.
+                </p>
+            </div>
+
+            <div class="grid" id="product-grid"></div>
+
+            <div class="text-center cta">
+                <button>Ver Todos os Produtos</button>
+            </div>
+        </div>
+    </section>
+    <section id="contato">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="title">Entre em <span>Contato</span></h2>
+                <p class="subtitle">
+                    Pronto para transformar seu ambiente? Entre em contato conosco e vamos criar juntos o projeto dos
+                    seus sonhos.
+                </p>
+            </div>
+
+            <div class="grid">
+                <!-- Formulário -->
+                <div class="form-box">
+                    <h3>Solicite seu Orçamento</h3>
+                    <form>
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" placeholder="Seu nome" />
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail</label>
+                            <input type="email" placeholder="seu@email.com" />
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone</label>
+                            <input type="tel" placeholder="(11) 99999-9999" />
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo de Projeto</label>
+                            <select>
+                                <option>Selecione o tipo de projeto</option>
+                                <option>Móveis Planejados</option>
+                                <option>Design de Interiores</option>
+                                <option>Móveis Exclusivos</option>
+                                <option>Reforma Completa</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Mensagem</label>
+                            <textarea rows="4" placeholder="Conte-nos mais sobre seu projeto..."></textarea>
+                        </div>
+                        <button type="submit">Enviar Solicitação</button>
+                    </form>
+                </div>
+
+                <!-- Informações de Contato -->
+                <div class="info-section">
+                    <div class="info-box">
+                        <div class="info-icon">📞</div>
+                        <div class="info-text">
+                            <h4>Telefone</h4>
+                            <p class="highlight">(11) 99999-9999</p>
+                            <p>Ligue agora para um orçamento</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-text">
+                            <h4>E-mail</h4>
+                            <p class="highlight">contato@arcmoveis.com.br</p>
+                            <p>Resposta em até 24h</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <h4>Endereço</h4>
+                            <p class="highlight">Rua dos Móveis, 123</p>
+                            <p>São Paulo - SP</p>
+                        </div>
+                    </div>
+                    <div class="info-box">
+                        <div class="info-icon">⏰</div>
+                        <div class="info-text">
+                            <h4>Horário</h4>
+                            <p class="highlight">Seg - Sex: 8h às 18h</p>
+                            <p>Sáb: 8h às 14h</p>
+                        </div>
+                    </div>
+
+                    <div class="map-box">
+                        <h4>Nossa Localização</h4>
+                        <div class="map-placeholder">
+                            <div style="width: 100%"><iframe width="100%" height="200px" border-radius="25px"
+                                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                                    src="https://maps.google.com/maps?width=100%25&amp;height=auto&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+                                        href="https://www.gps.ie/collections/sports-gps/">Cycling gps
+                                    </a>
+                                </iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <!-- Logo e descrição -->
+            <div class="footer-logo">
+                <h3>ARC<span>móveis</span></h3>
+                <p>
+                    Transformando ambientes há mais de 15 anos com design exclusivo,
+                    qualidade superior e atendimento personalizado.
+                </p>
+                <div class="social-icons">
+                    
+                    <a href="#" title="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
+                        </svg>
+                    </a>
+                    <a href="#" title="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z" />
+                        </svg>
+                    </a>
+                    <a href="#" title="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div class="footer-links">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Nossa História</a></li>
+                    <li><a href="#">Equipe</a></li>
+                    <li><a href="#">Certificações</a></li>
+                    <li><a href="#">Sustentabilidade</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#">Móveis Planejados</a></li>
+                    <li><a href="#">Design de Interiores</a></li>
+                    <li><a href="#">Móveis Exclusivos</a></li>
+                    <li><a href="#">Consultoria</a></li>
+                    <li><a href="#">Pós-venda</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Suporte</h4>
+                <ul>
+                    <li><a href="#">Central de Ajuda</a></li>
+                    <li><a href="#">Garantia</a></li>
+                    <li><a href="#">Manual de Cuidados</a></li>
+                    <li><a href="#">Agendamento</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Rodapé inferior -->
+        <div class="footer-bottom">
+            <div class="text-sm">© 2024 ARCmóveis. Todos os direitos reservados.</div>
+            <div>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Termos de Uso</a>
+                <button class="scroll-top-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">⬆</button>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script>
+
+        const toggleBtn = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isOpen = false;
+
+        toggleBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            mobileMenu.style.display = isOpen ? 'flex' : 'none';
+            toggleBtn.textContent = isOpen ? '✕' : '☰';
+        });
+
+        const products = [
+            {
+                title: 'Móveis Planejados',
+                description: 'Soluções personalizadas para cada ambiente da sua casa',
+                image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=500&h=400&fit=crop',
+                features: ['Cozinhas', 'Closets', 'Home Office', 'Quartos']
+            },
+            {
+                title: 'Design de Interiores',
+                description: 'Projetos completos com nossa equipe especializada',
+                image: 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=500&h=400&fit=crop',
+                features: ['Projeto 3D', 'Acompanhamento', 'Decoração', 'Iluminação']
+            },
+            {
+                title: 'Móveis Exclusivos',
+                description: 'Peças únicas criadas especialmente para você',
+                image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=500&h=400&fit=crop',
+                features: ['Madeira Nobre', 'Design Único', 'Artesanal', 'Sustentável']
+            }
+        ];
+
+        const grid = document.getElementById('product-grid');
+
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+            <img src="${product.image}" alt="${product.title}">
+            <div class="card-content">
+                <h3>${product.title}</h3>
+                <p>${product.description}</p>
+                <div class="features">
+                ${product.features.map(f => `
+                    <div class="feature">
+                    <div class="feature-dot"></div>${f}
+                    </div>
+                `).join('')}
+                </div>
+                <a href="#" class="btn">
+                Saiba Mais
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+
+
+</body>
+
+</html>
